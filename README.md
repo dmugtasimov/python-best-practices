@@ -5,7 +5,7 @@ of professional software engineering. They reflect my experience, reasoning, and
 maintaining software, and are shared as a practical reference rather than as a definitive or universal standard.
 As with any engineering guidance, their applicability may vary depending on context, constraints, and goals.
 
-## Technology stack
+## Technology Stack
 
 ### Core
 
@@ -36,6 +36,7 @@ As with any engineering guidance, their applicability may vary depending on cont
 - [Codex CLI](https://github.com/openai/codex)
 - [ChatGPT](https://chat.openai.com/)
 - [GitHub Copilot](https://github.com/features/copilot)
+- [Linear](https://linear.app/) (alternatively - [GitHub Projects](https://github.com/features/issues))
 - [pytest](https://pytest.org/)
 - [diff-cover](https://github.com/Bachmann1234/diff_cover)
 - [pre-commit](https://pre-commit.com/)
