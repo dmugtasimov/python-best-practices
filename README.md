@@ -5,6 +5,13 @@ of professional software engineering. They reflect my experience, reasoning, and
 maintaining software, and are shared as a practical reference rather than as a definitive or universal standard.
 As with any engineering guidance, their applicability may vary depending on context, constraints, and goals.
 
+## Table of Contents
+
+- [Technology Stack](#technology-stack)
+- [General Principles](#general-principles)
+- [General Coding Rules](#general-coding-rules)
+- [Python Specific Rules](#python-specific-rules)
+
 ## Technology Stack
 
 ### Core
@@ -69,3 +76,37 @@ As with any engineering guidance, their applicability may vary depending on cont
 - [Tenacity](https://tenacity.readthedocs.io/) - retry library
 - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) - HTML/XML parser
 - [Liquid](https://jg-rp.github.io/liquid/) - template engine
+
+## General Principles
+
+- [Respect best practices](general-principles/best-practices.md)
+- [Respect industry standards](general-principles/industry-standards.md)
+- [Respect backward compatibility](general-principles/backward-compatibility.md)
+- [Respect forward compatibility](general-principles/forward-compatibility.md)
+- [The Less code (lines) the better](general-principles/less-code.md)
+- [Write code to be read](general-principles/write-code-to-be-read.md) (by humans and AI), not just to be executed
+- [DRY](general-principles/dry.md) (Don't Repeat Yourself)
+- [KISS](general-principles/kiss.md) (Keep It Simple, Stupid)
+- [YAGNI](general-principles/yagni.md) (You Aren't Gonna Need It)
+- [Principle of Least Astonishment](general-principles/least-astonishment.md)
+- [Start new project with latest dependencies if possible](general-principles/latest-dependencies.md)
+- [Have a reason behind every decision](general-principles/reason-behind-decisions.md)
+- [Respect business needs over technical preferences](general-principles/respect-business-needs.md)
+- [Automate repetitive tasks](general-principles/automate.md)
+- [Use AI for coding as much as possible](general-principles/use-ai.md)
+- [Review and refactor AI-generated code](general-principles/review-and-refactor-ai-code.md)
+- amd more...
+
+## General Coding Rules
+
+- Declare and assign variable values as close to the usages as possible
+- Do not put a value to a variable if it is then read just once
+- Do not implement logic that depends on environment name the code is running in
+- Do not hard code a list of environments
+- and more...
+
+## Python Specific Rules
+
+- Follow [PEP 8](https://peps.python.org/pep-0008/) coding style guide, read more [here](./python-specific-rules/follow-pep8.md)
+- In except clause always prefer `.exception()` over `.error()` logger method, unless you have a good reason for otherwise
+- and more... 
