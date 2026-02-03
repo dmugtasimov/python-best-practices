@@ -9,60 +9,63 @@ As with any engineering guidance, their applicability may vary depending on cont
 
 ### Core
 
-- [Python](https://www.python.org/)
-- [Django](https://www.djangoproject.com/)
-- [Django REST Framework](https://www.django-rest-framework.org/) (alternatively [FastAPI](https://fastapi.tiangolo.com/) + [SQLAlchemy](https://www.sqlalchemy.org/) + [Alembic](https://alembic.sqlalchemy.org/))
-- [Celery](https://docs.celeryproject.org/)
-- [PostgreSQL](https://www.postgresql.org/)
-- [RabbitMQ](https://www.rabbitmq.com/)
-- [Redis](https://redis.io/) 
+- [Python](https://www.python.org/) - programming language
+- [Django](https://www.djangoproject.com/) - web framework
+- [Django REST Framework](https://www.django-rest-framework.org/)
+  (alternatively [FastAPI](https://fastapi.tiangolo.com/) + 
+   [SQLAlchemy](https://www.sqlalchemy.org/) + [Alembic](https://alembic.sqlalchemy.org/)) - REST API framework
+- [Celery](https://docs.celeryproject.org/) - distributed task queue
+- [PostgreSQL](https://www.postgresql.org/) - relational database
+- [RabbitMQ](https://www.rabbitmq.com/) - message broker
+- [Redis](https://redis.io/) - in-memory data store 
 
 ### DevOps & Infrastructure
 
-- [uv](https://github.com/astral-sh/uv) (earlier [Poetry](https://python-poetry.org/) + [pyenv](https://github.com/pyenv/pyenv))
-- [Docker](https://www.docker.com/) + [Docker Compose](https://docs.docker.com/compose/)
-- [Pulumi](https://www.pulumi.com/)
-- [Sentry](https://sentry.io/)
-- [AWS](https://aws.amazon.com/)
-- [Uvicorn](https://www.uvicorn.org/), [Gunicorn](https://gunicorn.org/)
-- [NGINX](https://nginx.org/) (or [Traefik](https://traefik.io/) for containerized deployments)
-- [Let's Encrypt](https://letsencrypt.org/)
-- [GitHub Actions](https://github.com/features/actions)
+- [uv](https://github.com/astral-sh/uv) (earlier [Poetry](https://python-poetry.org/) + [pyenv](https://github.com/pyenv/pyenv)) - package management
+- [Docker](https://www.docker.com/) + [Docker Compose](https://docs.docker.com/compose/) - containerization platform
+- [Pulumi](https://www.pulumi.com/) - infrastructure as code
+- [Sentry](https://sentry.io/) - error tracking
+- [AWS](https://aws.amazon.com/) - cloud platform
+- [Uvicorn](https://www.uvicorn.org/), [Gunicorn](https://gunicorn.org/) - application servers
+- [NGINX](https://nginx.org/) (or [Traefik](https://traefik.io/) for containerized deployments)  - load balancer and reverse proxy
+- [Let's Encrypt](https://letsencrypt.org/) - SSL/TLS certificate authority
+- [GitHub Actions](https://github.com/features/actions) - CI/CD platform
 
 ### Development & Quality Assurance Tools
 
-- [PyCharm](https://www.jetbrains.com/pycharm/)
-- [Claude Code](https://www.anthropic.com/claude)
-- [Codex CLI](https://github.com/openai/codex)
-- [ChatGPT](https://chat.openai.com/)
-- [GitHub Copilot](https://github.com/features/copilot)
-- [Linear](https://linear.app/) (alternatively - [GitHub Projects](https://github.com/features/issues))
-- [pytest](https://pytest.org/)
-- [diff-cover](https://github.com/Bachmann1234/diff_cover)
-- [pre-commit](https://pre-commit.com/)
-- [Ruff](https://github.com/astral-sh/ruff)
-- [GNU Make](https://www.gnu.org/software/make/)
-- [model-bakery](https://model-bakery.readthedocs.io/)
-- [ngrok](https://ngrok.com/)
-- [VCR.py](https://vcrpy.readthedocs.io/)
-- [Moto](https://github.com/getmoto/moto)
-- [pdbpp](https://github.com/pdbpp/pdbpp)
-- [colorlog](https://github.com/borntyping/python-colorlog)
+- [PyCharm](https://www.jetbrains.com/pycharm/) - IDE
+- AI coding assistants
+  - [Claude Code](https://www.anthropic.com/claude)
+  - [Codex CLI](https://github.com/openai/codex)
+  - [ChatGPT](https://chat.openai.com/)
+  - [GitHub Copilot](https://github.com/features/copilot)
+- [Linear](https://linear.app/) (alternatively - [GitHub Projects](https://github.com/features/issues)) - project management
+- [pytest](https://pytest.org/) - testing framework
+- [diff-cover](https://github.com/Bachmann1234/diff_cover) - test coverage tool
+- [pre-commit](https://pre-commit.com/) - git hook manager
+- [Ruff](https://github.com/astral-sh/ruff) (earlier [Flake8](https://flake8.pycqa.org/), [Pylint](https://pylint.org/)) - linting and formatting
+- [GNU Make](https://www.gnu.org/software/make/) - command automation
+- [model-bakery](https://model-bakery.readthedocs.io/) - fixture factory
+- [ngrok](https://ngrok.com/) - local tunneling service
+- [VCR.py](https://vcrpy.readthedocs.io/) - HTTP interaction recording
+- [Moto](https://github.com/getmoto/moto) - AWS service mocking
+- [pdbpp](https://github.com/pdbpp/pdbpp) - enhanced debugger
+- [colorlog](https://github.com/borntyping/python-colorlog) - colored logging
 
 ### Libraries
 
-- [django-split-settings](https://github.com/sobolevn/django-split-settings)
-- [django-restql](https://github.com/yezyilomo/django-restql)
-- [django-dirtyfields](https://github.com/romgar/django-dirtyfields)
-- [WhiteNoise](https://whitenoise.readthedocs.io/)
-- [Anymail](https://anymail.dev/)
-- [python-jose](https://github.com/mpdavis/python-jose)
-- [Jinja](https://jinja.palletsprojects.com/)
-- [time-machine](https://github.com/adamchainz/time-machine)
-- [Pydantic](https://docs.pydantic.dev/)
-- [tqdm](https://github.com/tqdm/tqdm)
-- [cachetools](https://github.com/tkem/cachetools)
-- [HTTPX](https://www.python-httpx.org/) (preferred over [Requests](https://requests.readthedocs.io/))
-- [Tenacity](https://tenacity.readthedocs.io/)
-- [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/)
-- [Liquid](https://jg-rp.github.io/liquid/)
+- [django-split-settings](https://github.com/sobolevn/django-split-settings) - settings organization
+- [django-restql](https://github.com/yezyilomo/django-restql) - GraphQL-like API queries
+- [django-dirtyfields](https://github.com/romgar/django-dirtyfields) - model field change tracking
+- [WhiteNoise](https://whitenoise.readthedocs.io/) - static file serving
+- [Anymail](https://anymail.dev/) - email service integration
+- [python-jose](https://github.com/mpdavis/python-jose) - JWT library
+- [Jinja](https://jinja.palletsprojects.com/) - template engine
+- [time-machine](https://github.com/adamchainz/time-machine) - time mocking for tests
+- [Pydantic](https://docs.pydantic.dev/) - data validation
+- [tqdm](https://github.com/tqdm/tqdm) - progress bars
+- [cachetools](https://github.com/tkem/cachetools) - caching utilities
+- [HTTPX](https://www.python-httpx.org/) (preferred over [Requests](https://requests.readthedocs.io/)) - HTTP client
+- [Tenacity](https://tenacity.readthedocs.io/) - retry library
+- [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) - HTML/XML parser
+- [Liquid](https://jg-rp.github.io/liquid/) - template engine
