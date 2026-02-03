@@ -95,7 +95,9 @@ As with any engineering guidance, their applicability may vary depending on cont
 - [Automate repetitive tasks](general-principles/automate.md)
 - [Use AI for coding as much as possible](general-principles/use-ai.md)
 - [Review and refactor AI-generated code](general-principles/review-and-refactor-ai-code.md)
-- amd more...
+- [Continuous refactoring](general-principles/continuous-refactoring.md)
+- [Unit testing](general-principles/unit-testing.md)
+- and more...
 
 ## General Coding Rules
 
