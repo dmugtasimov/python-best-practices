@@ -40,7 +40,7 @@ As with any engineering guidance, their applicability may vary depending on cont
 
 ### Development & Quality Assurance Tools
 
-- [PyCharm](https://www.jetbrains.com/pycharm/) - IDE
+- [PyCharm](https://www.jetbrains.com/pycharm/) - [IDE](technology-stack/ide.md)
 - AI coding assistants
   - [Claude Code](https://www.anthropic.com/claude)
   - [Codex CLI](https://github.com/openai/codex)
@@ -79,24 +79,25 @@ As with any engineering guidance, their applicability may vary depending on cont
 
 ## General Principles
 
-- [Respect best practices](general-principles/best-practices.md)
-- [Respect industry standards](general-principles/industry-standards.md)
-- [Respect backward compatibility](general-principles/backward-compatibility.md)
-- [Respect forward compatibility](general-principles/forward-compatibility.md)
-- [The Less code (lines) the better](general-principles/less-code.md)
-- [Write code to be read](general-principles/write-code-to-be-read.md) (by humans and AI), not just to be executed
+- Respect best practices
+- Respect industry standards
+- Respect backward compatibility
+- Respect forward compatibility
+- The Less code (lines) the better
+- Write code to be read (by humans and AI), not just to be executed
 - [DRY](general-principles/dry.md) (Don't Repeat Yourself)
-- [KISS](general-principles/kiss.md) (Keep It Simple, Stupid)
-- [YAGNI](general-principles/yagni.md) (You Aren't Gonna Need It)
-- [Principle of Least Astonishment](general-principles/least-astonishment.md)
-- [Start new project with latest dependencies if possible](general-principles/latest-dependencies.md)
-- [Have a reason behind every decision](general-principles/reason-behind-decisions.md)
-- [Respect business needs over technical preferences](general-principles/respect-business-needs.md)
-- [Automate repetitive tasks](general-principles/automate.md)
-- [Use AI for coding as much as possible](general-principles/use-ai.md)
-- [Review and refactor AI-generated code](general-principles/review-and-refactor-ai-code.md)
-- [Continuous refactoring](general-principles/continuous-refactoring.md)
-- [Unit testing](general-principles/unit-testing.md)
+- KISS (Keep It Simple, Stupid)
+- YAGNI (You Aren't Gonna Need It)
+- Principle of Least Astonishment
+- Start new project with latest dependencies if possible
+- Have a reason behind every decision
+- Respect business needs over technical preferences
+- Automate repetitive tasks
+- Use AI for coding as much as possible
+- Review and refactor AI-generated code
+- Continuous refactoring
+- Unit testing
+- Continuous Learning
 - and more...
 
 ## General Coding Rules
@@ -105,6 +106,8 @@ As with any engineering guidance, their applicability may vary depending on cont
 - Do not put a value to a variable if it is then read just once
 - Do not implement logic that depends on environment name the code is running in
 - Do not hard code a list of environments
+- Avoid dead code
+- Use meaningful comments about why certain decisions were made, not how the code works (especially in AI era)
 - and more...
 
 ## Python Specific Rules
