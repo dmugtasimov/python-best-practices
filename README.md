@@ -1,5 +1,7 @@
 # Python Best Practices
 
+Python Best Practices developed by Dmitry Mugtasimov during the course of his 26-year career in software engineering.
+
 DISCLAIMER: This repository documents Python best practices as I have developed and refined them over 26 years
 of professional software engineering. They reflect my experience, reasoning, and approach to building and
 maintaining software, and are shared as a practical reference rather than as a definitive or universal standard.
@@ -83,7 +85,7 @@ As with any engineering guidance, their applicability may vary depending on cont
 - Respect industry standards
 - Respect backward compatibility
 - Respect forward compatibility
-- The Less code (lines) the better
+- [The Less code (lines) the better](./general-principles/less-code.md)
 - Write code to be read (by humans and AI), not just to be executed
 - [DRY](general-principles/dry.md) (Don't Repeat Yourself)
 - KISS (Keep It Simple, Stupid)
@@ -107,7 +109,9 @@ As with any engineering guidance, their applicability may vary depending on cont
 - Do not implement logic that depends on environment name the code is running in
 - Do not hard code a list of environments
 - Avoid dead code
-- Use meaningful comments about why certain decisions were made, not how the code works (especially in AI era)
+- [Use comments and docstrings reasonably](general-coding-rules/comments.md)
+- Use asserts to describe expected invariants and assumptions in the code
+- [Use TODO or FIX comments](general-coding-rules/todo-comments.md) to describe technical debt and convey intended imperfections to other developers
 - and more...
 
 ## Python Specific Rules

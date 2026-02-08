@@ -1,3 +1,3 @@
-Under construction
+https://medium.com/@dmugtasimov/less-lines-is-better-in-most-cases-7e07e7efedfa
 
-[back](../README.md)
+[Back](../README.md)

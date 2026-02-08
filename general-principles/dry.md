@@ -54,4 +54,4 @@ With less time spent typing, you can focus more on improving design and structur
 
 - [DRY Principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) - Wikipedia
 
-[back](../README.md)
+[Back](../README.md)
