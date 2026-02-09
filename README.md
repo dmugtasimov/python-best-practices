@@ -1,6 +1,6 @@
 # Python Best Practices
 
-Python Best Practices developed by Dmitry Mugtasimov during the course of his 26-year career in software engineering.
+Python Best Practices developed by [Dmitry Mugtasimov](mailto:dmugtasimov@gmail.com) during the course of his 26-year career in software engineering.
 
 **DISCLAIMER**: *This repository documents Python best practices as I have developed and refined them over 26 years
 of professional software engineering. They reflect my experience, reasoning, and approach to building and
