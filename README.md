@@ -2,10 +2,10 @@
 
 Python Best Practices developed by Dmitry Mugtasimov during the course of his 26-year career in software engineering.
 
-DISCLAIMER: This repository documents Python best practices as I have developed and refined them over 26 years
+**DISCLAIMER**: *This repository documents Python best practices as I have developed and refined them over 26 years
 of professional software engineering. They reflect my experience, reasoning, and approach to building and
 maintaining software, and are shared as a practical reference rather than as a definitive or universal standard.
-As with any engineering guidance, their applicability may vary depending on context, constraints, and goals.
+As with any engineering guidance, their applicability may vary depending on context, constraints, and goals.*
 
 ## Table of Contents
 
