@@ -112,6 +112,7 @@ As with any engineering guidance, their applicability may vary depending on cont
 - [Use comments and docstrings reasonably](general-coding-rules/comments.md)
 - Use asserts to describe expected invariants and assumptions in the code
 - [Use TODO or FIX comments](general-coding-rules/todo-comments.md) to describe technical debt and convey intended imperfections to other developers
+- Implement database schema changes and related business logic in the same pull request
 - and more...
 
 ## Python Specific Rules
