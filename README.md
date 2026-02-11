@@ -109,6 +109,7 @@ As with any engineering guidance, their applicability may vary depending on cont
 - Do not implement logic that depends on environment name the code is running in
 - Do not hard code a list of environments
 - Avoid dead code
+- Self code review
 - [Use comments and docstrings reasonably](general-coding-rules/comments.md)
 - Use asserts to describe expected invariants and assumptions in the code
 - [Use TODO or FIX comments](general-coding-rules/todo-comments.md) to describe technical debt and convey intended imperfections to other developers
