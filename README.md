@@ -100,6 +100,7 @@ As with any engineering guidance, their applicability may vary depending on cont
 - Continuous refactoring
 - Unit testing
 - Continuous Learning
+- Consistency
 - and more...
 
 ## General Coding Rules
@@ -114,6 +115,7 @@ As with any engineering guidance, their applicability may vary depending on cont
 - Use asserts to describe expected invariants and assumptions in the code
 - [Use TODO or FIX comments](general-coding-rules/todo-comments.md) to describe technical debt and convey intended imperfections to other developers
 - Implement database schema changes and related business logic in the same pull request
+- [Use consistent data attributes naming](general-coding-rules/consistent-naming.md):
 - and more...
 
 ## Python Specific Rules
