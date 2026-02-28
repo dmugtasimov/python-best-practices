@@ -8,7 +8,7 @@ maintaining software, and are shared as a practical reference rather than as a d
 As with any engineering guidance, their applicability may vary depending on context, constraints, and goals.*
 
 **DISCLAIMER 2**: *This is "work in progress" repository. If you did not find something you might have expected then
-it just not written*
+it just not written yet.*
 
 You can contact me via:
 - Email: [dmugtasimov@gmail.com](mailto:dmugtasimov@gmail.com)
