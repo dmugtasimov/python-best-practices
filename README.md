@@ -7,6 +7,14 @@ of professional software engineering. They reflect my experience, reasoning, and
 maintaining software, and are shared as a practical reference rather than as a definitive or universal standard.
 As with any engineering guidance, their applicability may vary depending on context, constraints, and goals.*
 
+**DISCLAIMER 2**: *This is "work in progress" repository. If you did not find something you might have expected then
+it just not written*
+
+You can contact me via:
+- Email: [dmugtasimov@gmail.com](mailto:dmugtasimov@gmail.com)
+- X: [@dmugtasimov](https://x.com/dmugtasimov)
+- Telegram: [@dmugtasimov](https://t.me/dmugtasimov)
+
 ## Table of Contents
 
 - [Technology Stack](#technology-stack)
@@ -79,43 +87,51 @@ As with any engineering guidance, their applicability may vary depending on cont
 - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) - HTML/XML parser
 - [Liquid](https://jg-rp.github.io/liquid/) - template engine
 
-## General Principles
+## General Software Development Principles
 
-- Respect best practices
-- Respect industry standards
-- Respect backward compatibility
+- [Respect best practices](general-principles/best-practices.md)
+- [Respect industry standards](general-principles/industry-standards.md)
+- [Respect backward compatibility](general-principles/backward-compatibility.md)
 - Respect forward compatibility
-- [The Less code (lines) the better](./general-principles/less-code.md)
-- Write code to be read (by humans and AI), not just to be executed
+- [Write code to be read by humans](general-principles/write-code-to-be-read.md) (and AI), not just to be executed
+- [Continuous refactoring](general-principles/continuous-refactoring.md)
+- [Continuous Learning](general-principles/continuous-learing.md)
+- [Use AI for coding as much as possible](general-principles/use-ai.md)
+- [Review and refactor AI-generated code](general-principles/review-and-refactor-ai-code.md)
+- [The Less code (lines) the better](general-principles/less-code.md)
 - [DRY](general-principles/dry.md) (Don't Repeat Yourself)
 - KISS (Keep It Simple, Stupid)
-- YAGNI (You Aren't Gonna Need It)
+- [YAGNI](general-principles/yagni.md) (You Aren't Gonna Need It)
 - Principle of Least Astonishment
-- Start new project with latest dependencies if possible
+- Code reuse
+- Encapsulation
 - Have a reason behind every decision
 - Respect business needs over technical preferences
 - Automate repetitive tasks
-- Use AI for coding as much as possible
-- Review and refactor AI-generated code
-- Continuous refactoring
-- Unit testing
-- Continuous Learning
+- [Unit testing](general-principles/unit-testing.md)
+- Consistency
 - and more...
 
 ## General Coding Rules
 
+- Start new project with latest dependencies if possible
 - Declare and assign variable values as close to the usages as possible
 - Do not put a value to a variable if it is then read just once
 - Do not implement logic that depends on environment name the code is running in
 - Do not hard code a list of environments
 - Avoid dead code
+- Self and AI code review
 - [Use comments and docstrings reasonably](general-coding-rules/comments.md)
 - Use asserts to describe expected invariants and assumptions in the code
 - [Use TODO or FIX comments](general-coding-rules/todo-comments.md) to describe technical debt and convey intended imperfections to other developers
+- Implement database schema changes and related business logic in the same pull request
+- [Use consistent data attributes naming](general-coding-rules/consistent-naming.md)
+- Assign or declare variables as close to their usage as possible
 - and more...
 
 ## Python Specific Rules
 
 - Follow [PEP 8](https://peps.python.org/pep-0008/) coding style guide, read more [here](./python-specific-rules/follow-pep8.md)
 - In except clause always prefer `.exception()` over `.error()` logger method, unless you have a good reason for otherwise
+- Use keyword arguments for arguments with default values. Call `def f(arg='default'):` with `f(arg='value')` instead of `f('value')`.
 - and more... 
