@@ -54,6 +54,16 @@ else:
 role = "admin" if is_admin else "user"
 ```
 
+### Instead of rebuilding a string by referencing the variable itself
+```python
+string_value = f'{string_value} {suffix}'
+```
+
+↓↓↓ Use augmented assignment to append in place ↓↓↓
+```python
+string_value += f' {suffix}'
+```
+
 More to be added...
 
 ## Complementary techniques
