@@ -132,6 +132,7 @@ You can contact me via:
 ## Python Specific Rules
 
 - Follow [PEP 8](https://peps.python.org/pep-0008/) coding style guide, read more [here](./python-specific-rules/follow-pep8.md)
+- Use Python [logging framework](https://docs.python.org/3/library/logging.html) instead of print statements for logging
 - In except clause always prefer `.exception()` over `.error()` logger method, unless you have a good reason for otherwise
 - Use keyword arguments for arguments with default values. Call `def f(arg='default'):` with `f(arg='value')` instead of `f('value')`.
 - and more... 
