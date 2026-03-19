@@ -5,6 +5,8 @@ my workflow, and now I use it for as much as possible for the software developme
 
 ## Stages of AI Adoption
 
+YouTube video: [4 Stages of AI Adoption That Changed How I Work](https://www.youtube.com/watch?v=CicXYoYsL3g)
+
 My AI adoption went through four stages:
 
 1. **Curiosity.** Experimenting with AI to see what it can do.
@@ -18,6 +20,8 @@ AI helps you learn new things, work faster on familiar ones, and sustain product
 reducing mental effort.
 
 ## My AI Toolset
+
+YouTube video: [How I Use AI for Coding, Research, Code Review, and DevOps](https://www.youtube.com/watch?v=TqwhovZnAHw)
 
 - **ChatGPT** (web interface) — used in early stages for everything because it was the only
   tool available. Now I use it rarely, mostly to learn completely new topics. I also used it as
