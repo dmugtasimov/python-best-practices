@@ -120,18 +120,21 @@ You can contact me via:
 - Do not implement logic that depends on environment name the code is running in
 - Do not hard code a list of environments
 - Avoid dead code
-- Self and AI code review
+- Self code review and AI aided code review before submitting a pull request
+- Prefer REST API over RPC API, otherwise use GraphQL API
 - [Use comments and docstrings reasonably](general-coding-rules/comments.md)
 - Use asserts to describe expected invariants and assumptions in the code
 - [Use TODO or FIX comments](general-coding-rules/todo-comments.md) to describe technical debt and convey intended imperfections to other developers
 - Implement database schema changes and related business logic in the same pull request
 - [Use consistent data attributes naming](general-coding-rules/consistent-naming.md)
 - Assign or declare variables as close to their usage as possible
+- Use ServiceNameClient class wrapper even with official SDKs and service clients
 - and more...
 
 ## Python Specific Rules
 
 - Follow [PEP 8](https://peps.python.org/pep-0008/) coding style guide, read more [here](./python-specific-rules/follow-pep8.md)
+- Use Python [logging framework](https://docs.python.org/3/library/logging.html) instead of print statements for logging
 - In except clause always prefer `.exception()` over `.error()` logger method, unless you have a good reason for otherwise
 - Use keyword arguments for arguments with default values. Call `def f(arg='default'):` with `f(arg='value')` instead of `f('value')`.
 - and more... 
