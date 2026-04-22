@@ -1,19 +1,19 @@
 # Python Best Practices
 
-Python Best Practices developed by [Dmitry Mugtasimov](mailto:dmugtasimov@gmail.com) during the course of his 26-year career in software engineering.
+Python Best Practices developed by Dmitry Mugtasimov during the course of his [27-years career in software engineering](https://github.com/dmugtasimov/resume).
 
-**DISCLAIMER**: *This repository documents Python best practices as I have developed and refined them over 26 years
+You can contact me via:
+- Email: [dmugtasimov@gmail.com](mailto:dmugtasimov@gmail.com)
+- X: [@dmugtasimov](https://x.com/dmugtasimov)
+- Telegram: [@dmugtasimov](https://t.me/dmugtasimov)
+
+**DISCLAIMER**: *This repository documents Python best practices as I have developed and refined them over 27 years
 of professional software engineering. They reflect my experience, reasoning, and approach to building and
 maintaining software, and are shared as a practical reference rather than as a definitive or universal standard.
 As with any engineering guidance, their applicability may vary depending on context, constraints, and goals.*
 
 **DISCLAIMER 2**: *This is "work in progress" repository. If you did not find something you might have expected then
 it is just not written yet.*
-
-You can contact me via:
-- Email: [dmugtasimov@gmail.com](mailto:dmugtasimov@gmail.com)
-- X: [@dmugtasimov](https://x.com/dmugtasimov)
-- Telegram: [@dmugtasimov](https://t.me/dmugtasimov)
 
 ## Table of Contents
 
