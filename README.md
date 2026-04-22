@@ -15,6 +15,9 @@ As with any engineering guidance, their applicability may vary depending on cont
 **DISCLAIMER 2**: *This is "work in progress" repository. If you did not find something you might have expected then
 it is just not written yet.*
 
+**DISCLAIMER 3**: *There are a lot of changes happened since the beginning of 2026 due to the AI advancements.
+Not all them have been reflected here yet.*
+
 ## Table of Contents
 
 - [Technology Stack](#technology-stack)
