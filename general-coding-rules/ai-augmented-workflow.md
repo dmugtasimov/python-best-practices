@@ -36,6 +36,19 @@ When extra context is easier to speak than type, dictate it, transcribe it, and 
 transcription after the concise task specification. The specification gives the agent the target;
 the transcription gives background and nuance.
 
+## First Implementation Pass
+
+Treat the first Codex implementation as a draft. At this stage, usually tell Codex not to create
+tests and not to create Django migrations. The implementation will often need refactoring after
+review, so writing tests too early can waste time and tokens because those tests may need to be
+rewritten together with the code.
+
+For Django changes, generate migrations after the implementation has settled. This avoids
+reviewing and regenerating migration files for code that may still change substantially.
+
+After Codex creates the first draft, commit the changes and open a draft pull request. This makes
+the diff easier to inspect and turns the review into a concrete file-by-file process.
+
 ## Research Workflow
 
 When the task is not clear, research before implementation.
@@ -52,6 +65,23 @@ the current project.
 After the research phase, turn the chosen approach into a concrete Codex task. Paste any useful
 notes from ChatGPT into Codex when they help preserve context, but let Codex do the final
 alignment with the repository.
+
+## Refactoring Workflow
+
+Review the draft file by file. When you see issues, use one of three refactoring paths.
+
+Most often, describe the desired change in plain English and ask Codex to make it: merge two
+functions, remove a parameter, simplify a branch, rename an object, move logic to a better place,
+or apply another specific refactoring. If the explanation is long, dictate it and paste the
+transcription into Codex or use a voice transcription MCP such as Voice Code.
+
+Often, start the refactoring yourself to show the direction, then ask Codex to complete it. This
+works well when the intended shape is obvious from the partial change. When it is less obvious,
+combine the partial code change with explicit instructions about what still needs to be done.
+
+Least often, refactor fully by hand. This is mainly useful for complicated algorithms or logic
+where the intended change is easier to express in code than in English. Even then, once the
+direction becomes clear enough, hand the remaining mechanical work back to Codex.
 
 ## Human Responsibility
 
