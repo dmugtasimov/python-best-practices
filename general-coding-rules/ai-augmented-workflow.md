@@ -28,6 +28,15 @@ and paste the raw text after the concise task description.
 For one task, I usually keep the same main Codex session through implementation and fixes. That
 keeps the working context in one place.
 
+## Research Workflow
+
+When the task or architecture is unclear, I research first. For completely new topics, I use
+ChatGPT to understand concepts and options. For project-specific uncertainty, I research directly
+in Codex because it has the codebase context. After that, I turn the chosen approach into a
+concrete Codex task.
+
+When the task is obvious, I skip this stage and go straight to the first implementation draft.
+
 ## First Implementation Pass
 
 I treat the first Codex result as a draft. At this stage I often tell it not to create tests and
@@ -38,13 +47,6 @@ After the first draft, I commit it and open a draft pull request. The PR gives m
 surface than reading scattered working-tree changes. I keep it in draft mode while I am pushing
 frequently, usually by amending the same commit, and only mark it ready when I want CI and human
 review to start.
-
-## Research Workflow
-
-When the task or architecture is unclear, I research first. For completely new topics, I use
-ChatGPT to understand concepts and options. For project-specific uncertainty, I research directly
-in Codex because it has the codebase context. After that, I turn the chosen approach into a
-concrete Codex task.
 
 ## Refactoring Workflow
 
