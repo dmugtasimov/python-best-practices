@@ -1,93 +1,62 @@
 # AI Augmented Workflow
 
-Use AI coding agents as part of the normal development workflow, not as a separate experiment.
-The goal is to reduce cognitive load, move faster, and still keep human engineering judgment in
-control of architecture, quality, and final decisions.
+This is how I currently use AI coding agents in day-to-day software development. It is not a
+universal recipe or final workflow; it is the process that works for me now.
 
 ## Persistent AI Context
 
-Codex should have persistent user-level instructions. The official Codex documentation says the
-global instruction file is `~/.codex/AGENTS.md` by default, unless `CODEX_HOME` points to another
-Codex home directory. Keep that file under version control, then symlink it into place on each
-machine.
+I keep persistent Codex instructions in the user-level file. By default, Codex reads
+`~/.codex/AGENTS.md`, unless `CODEX_HOME` points somewhere else. I prefer to keep this file in
+version control and symlink it on each machine.
 
-Use this file to accumulate durable rules that should affect all projects: coding style,
-preferred commands, review expectations, security constraints, naming conventions, and personal
-workflow preferences. Do not try to keep everything in memory or repeat the same instructions in
-every prompt.
-
-Add a unique marker or magic number to the file and ask the agent to report it. This makes it much
-easier to verify that the expected instruction file was actually loaded, especially when global,
-repository, and nested instruction files are combined.
+I use it for durable rules that should apply across projects: style preferences, security
+constraints, review expectations, naming conventions, and workflow habits. I also put a magic
+number there and ask Codex to report it, so I can quickly verify that the expected instruction file
+was loaded.
 
 ## Task Workflow
 
-When the task is clear, write the prompt like a practical task specification for another
-developer. Describe the desired behavior, important fields, constraints, and implementation
-details that matter. The prompt does not need polished English or exhaustive wording. Good AI
-coding agents can fill in small gaps when the direction is clear.
+When the task is clear, I write the prompt like a short task specification for another developer:
+desired behavior, important fields, constraints, and implementation details that matter. I do not
+try to make the English perfect or cover every small gap.
 
-Use Codex with GPT-5.4 when available for implementation, codebase research, and alignment with
-the existing project. Treat the repository context as part of the prompt: the agent should inspect
-the structure, learn local patterns, and make the change in the style already present in the
-codebase.
-
-When extra context is easier to speak than type, dictate it, transcribe it, and paste the raw
-transcription after the concise task specification. The specification gives the agent the target;
-the transcription gives background and nuance.
+I use Codex with GPT-5.4 when available and let it inspect the repository so the implementation
+fits the existing structure. When I need to add more context, I often dictate it, transcribe it,
+and paste the raw text after the concise task description.
 
 ## First Implementation Pass
 
-Treat the first Codex implementation as a draft. At this stage, usually tell Codex not to create
-tests and not to create Django migrations. The implementation will often need refactoring after
-review, so writing tests too early can waste time and tokens because those tests may need to be
-rewritten together with the code.
+I treat the first Codex result as a draft. At this stage I often tell it not to create tests and
+not to create Django migrations. The code usually needs refactoring, so early tests and migrations
+often become extra work to review, rewrite, or regenerate.
 
-For Django changes, generate migrations after the implementation has settled. This avoids
-reviewing and regenerating migration files for code that may still change substantially.
-
-After Codex creates the first draft, commit the changes and open a draft pull request. This makes
-the diff easier to inspect and turns the review into a concrete file-by-file process.
+After the first draft, I commit it and open a draft pull request. The PR gives me a better review
+surface than reading scattered working-tree changes.
 
 ## Research Workflow
 
-When the task is not clear, research before implementation.
-
-If the topic is completely new, use ChatGPT first to learn the concepts, compare options, and
-understand the design space. This is useful for unfamiliar areas such as new machine learning
-techniques, infrastructure concepts, or domains where the architecture is not obvious yet.
-
-If the topic is mostly clear but needs project-specific investigation, research directly in
-Codex. Codex has the codebase in context, so it is better for understanding local constraints,
-existing abstractions, dependencies, and the tradeoffs of different implementation options inside
-the current project.
-
-After the research phase, turn the chosen approach into a concrete Codex task. Paste any useful
-notes from ChatGPT into Codex when they help preserve context, but let Codex do the final
-alignment with the repository.
+When the task or architecture is unclear, I research first. For completely new topics, I use
+ChatGPT to understand concepts and options. For project-specific uncertainty, I research directly
+in Codex because it has the codebase context. After that, I turn the chosen approach into a
+concrete Codex task.
 
 ## Refactoring Workflow
 
-Review the draft file by file. When you see issues, use one of three refactoring paths.
+I review the draft file by file and usually refactor it in one of three ways.
 
-Most often, describe the desired change in plain English and ask Codex to make it: merge two
-functions, remove a parameter, simplify a branch, rename an object, move logic to a better place,
-or apply another specific refactoring. If the explanation is long, dictate it and paste the
-transcription into Codex or use a voice transcription MCP such as Voice Code.
+Most often, I describe the change in plain English and ask Codex to do it: merge functions,
+remove a parameter, simplify logic, rename something, or move code. If the explanation is long, I
+dictate it and paste the transcription.
 
-Often, start the refactoring yourself to show the direction, then ask Codex to complete it. This
-works well when the intended shape is obvious from the partial change. When it is less obvious,
-combine the partial code change with explicit instructions about what still needs to be done.
-
-Least often, refactor fully by hand. This is mainly useful for complicated algorithms or logic
-where the intended change is easier to express in code than in English. Even then, once the
-direction becomes clear enough, hand the remaining mechanical work back to Codex.
+Often, I start the refactoring myself to show the direction, then ask Codex to finish it. Least
+often, I refactor fully by hand, usually when the logic is easier to express in code than in
+English.
 
 ## Human Responsibility
 
-AI can produce the implementation, but the developer still owns the result. Review the generated
-changes, check that they follow the local best practices, remove unnecessary complexity, and
-verify behavior before publishing.
+AI can produce the implementation, but I still own the result. I review the generated changes,
+remove unnecessary complexity, align the code with local practices, and verify behavior before
+publishing.
 
 See also:
 - [Use AI for Coding as Much as Possible](../general-principles/use-ai.md)
