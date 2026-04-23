@@ -117,6 +117,7 @@ Not all them have been reflected here yet.*
 
 ## General Coding Rules
 
+- [AI Augmented Workflow](general-coding-rules/ai-augmented-workflow.md)
 - Start new project with latest dependencies if possible
 - Declare and assign variable values as close to the usages as possible
 - Do not put a value to a variable if it is then read just once
