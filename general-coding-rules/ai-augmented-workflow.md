@@ -15,12 +15,20 @@ constraints, review expectations, naming conventions, and workflow habits. I als
 number there and ask Codex to report it, so I can quickly verify that the expected instruction file
 was loaded.
 
+## Research Workflow
+
+When the task or architecture is unclear, I research before writing the implementation prompt. For
+completely new topics, I use ChatGPT to understand concepts and options. For project-specific
+uncertainty, I research directly in Codex because it has the codebase context. After that, I turn
+the chosen approach into a more concrete Codex task.
+
+When the task is obvious, I skip this stage and go straight to task prompting.
+
 ## Task Workflow
 
-I start by writing what I already know about the task. When it is clear enough, the prompt looks
-like a short task specification for another developer: desired behavior, important fields,
-constraints, and implementation details that matter. I do not try to make the English perfect or
-cover every small gap.
+After any needed research, I write the prompt like a short task specification for another
+developer: desired behavior, important fields, constraints, and implementation details that
+matter. I do not try to make the English perfect or cover every small gap.
 
 I use Codex with GPT-5.4 when available and let it inspect the repository so the implementation
 fits the existing structure. When I need to add more context, I often dictate it, transcribe it,
@@ -28,15 +36,6 @@ and paste the raw text after the concise task description.
 
 For one task, I usually keep the same main Codex session through implementation and fixes. That
 keeps the working context in one place.
-
-## Research Workflow
-
-When the task or architecture is unclear, I research first. For completely new topics, I use
-ChatGPT to understand concepts and options. For project-specific uncertainty, I research directly
-in Codex because it has the codebase context. After that, I turn the chosen approach into a more
-concrete Codex task.
-
-When the task is obvious, I skip this stage and go straight to the first implementation draft.
 
 ## First Implementation Pass
 
