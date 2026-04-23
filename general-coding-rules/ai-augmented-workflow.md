@@ -17,9 +17,10 @@ was loaded.
 
 ## Task Workflow
 
-When the task is clear, I write the prompt like a short task specification for another developer:
-desired behavior, important fields, constraints, and implementation details that matter. I do not
-try to make the English perfect or cover every small gap.
+I start by writing what I already know about the task. When it is clear enough, the prompt looks
+like a short task specification for another developer: desired behavior, important fields,
+constraints, and implementation details that matter. I do not try to make the English perfect or
+cover every small gap.
 
 I use Codex with GPT-5.4 when available and let it inspect the repository so the implementation
 fits the existing structure. When I need to add more context, I often dictate it, transcribe it,
@@ -32,7 +33,7 @@ keeps the working context in one place.
 
 When the task or architecture is unclear, I research first. For completely new topics, I use
 ChatGPT to understand concepts and options. For project-specific uncertainty, I research directly
-in Codex because it has the codebase context. After that, I turn the chosen approach into a
+in Codex because it has the codebase context. After that, I turn the chosen approach into a more
 concrete Codex task.
 
 When the task is obvious, I skip this stage and go straight to the first implementation draft.
