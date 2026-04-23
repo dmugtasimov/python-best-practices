@@ -25,6 +25,9 @@ I use Codex with GPT-5.4 when available and let it inspect the repository so the
 fits the existing structure. When I need to add more context, I often dictate it, transcribe it,
 and paste the raw text after the concise task description.
 
+For one task, I usually keep the same main Codex session through implementation and fixes. That
+keeps the working context in one place.
+
 ## First Implementation Pass
 
 I treat the first Codex result as a draft. At this stage I often tell it not to create tests and
@@ -32,7 +35,9 @@ not to create Django migrations. The code usually needs refactoring, so early te
 often become extra work to review, rewrite, or regenerate.
 
 After the first draft, I commit it and open a draft pull request. The PR gives me a better review
-surface than reading scattered working-tree changes.
+surface than reading scattered working-tree changes. I keep it in draft mode while I am pushing
+frequently, usually by amending the same commit, and only mark it ready when I want CI and human
+review to start.
 
 ## Research Workflow
 
@@ -53,6 +58,9 @@ Often, I start the refactoring myself to show the direction, then ask Codex to f
 often, I refactor fully by hand, usually when the logic is easier to express in code than in
 English.
 
+I use GitHub's reviewed-file markers during this self-review. If a reviewed file changes, GitHub
+unmarks it, which makes it easier to see what still needs another pass.
+
 ## Verification Workflow
 
 After refactoring, I create migrations and run them. In Django projects I may create migrations
@@ -72,6 +80,39 @@ Finally, I ask Codex to run the full test suite step by step and fix simple issu
 it to stop and report if it suspects a real bug or a non-obvious test update. In that case, I
 decide whether the implementation is wrong, the old test should change, or the old test no longer
 makes sense.
+
+## Evaluation Workflow
+
+When all tests pass, I run several evaluation passes before asking anyone else to review.
+
+First, I open fresh AI review sessions so the reviewer model is not biased by the implementation
+session. I use a custom review prompt in both Codex and Claude Code, asking for code issues and
+test coverage gaps. The main implementation session stays open, so I can paste findings back into
+it and ask Codex to address them.
+
+Second, I check test coverage. If important code is uncovered, I ask Codex to add specific tests
+and then review those tests myself.
+
+Third, I finish my own code review in the draft pull request. Some files may already be marked as
+reviewed from earlier stages; I review the remaining files and re-review anything GitHub
+unmarked.
+
+For each AI review finding, I decide whether to address it. Often I paste the finding into the
+implementation session and say to address it. Sometimes I add direction because the model is too
+defensive, lacks context, or makes an assumption I do not want. After fixes, I ask the reviewer to
+check again. This catches unresolved findings and sometimes new issues introduced by the fix.
+
+I also run linting and other QA commands. For simple failures such as unused imports, I usually
+ask Codex to run the command and address the issues.
+
+## Publishing Workflow
+
+When the code, tests, coverage, linting, AI review, and self-review look good, I push the final
+amended commit and mark the pull request ready for review. CI starts at that point in projects
+where draft PRs do not run it.
+
+Only after CI is green and I have reviewed the whole PR myself do I ask colleagues to review it.
+When they approve, I merge.
 
 ## Human Responsibility
 
